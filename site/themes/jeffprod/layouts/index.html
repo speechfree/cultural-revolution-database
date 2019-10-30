@@ -1,0 +1,51 @@
+{{ define "main" }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Section" "post").ByPublishDate.Reverse }}
+
+<div class="columns">
+    <div class="column is-9">
+        <div class="tile is-child box">
+            <div class="content">
+                <h3>Let's Fight For Freedom of Speech !</h3>
+                <hr>
+                {{ range $paginator.Pages }}
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="title is-4"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></p>
+                            <p class="subtitle is-size-6 has-text-grey-light">
+                                Published at {{ .Date.Format "January 2, 2006" }} &middot;
+                                <i class="far fa-clock"></i>&nbsp;{{.ReadingTime}} min read
+                            </p>
+                            <p>{{ .Summary }}...</p>
+                        </div>
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    <div class="column is-3">
+        {{ partial "widget-tags.html" . }}<br>
+        {{ partial "widget-recent.html" . }}<br>
+        {{ partial "widget-archives.html" . }}
+    </div>
+</div>
+<div class="columns">
+    <div class="column is-9">
+        <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+            {{ if $paginator.HasPrev }}<a class="pagination-previous"
+                href="{{ $paginator.Prev.URL }}">Previous</a>{{ end }}
+            {{ if $paginator.HasNext }}<a class="pagination-next" href="{{ $paginator.Next.URL }}">Next</a>{{ end }}
+            <ul class="pagination-list">
+                {{ range $paginator.Pagers }}
+                <li class="pagination__item">
+                    <a class="pagination-link{{ if eq . $paginator }} is-current{{ end }}"
+                        aria-label="Goto page {{ .PageNumber }}" href="{{ .URL }}">{{ .PageNumber }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+</div>
+
+{{ end }}

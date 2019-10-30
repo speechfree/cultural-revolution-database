@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/index.xml">
+    <!-- <meta property="og:image" content="https://source.unsplash.com/1200x675/?programming" /> -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@SpeechFreedomCN">
+    <meta name="twitter:creator" content="@SpeechFreedomCN">
+    <meta name="og:title" content="{{ with .Title }} {{ . }}{{ end }} | {{ $.Site.Title }} " />
+    <meta name="og:description" content="{{ .Summary }}" />
+    <meta name="og:image"
+        content="https://opvlbqxurl.execute-api.ap-northeast-2.amazonaws.com/prod/random?keyword=programming&slug={{ .Title }}" />
+    <title>{{ with .Title }} {{ . }}{{ end }} | {{ .Site.Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ template "_internal/google_analytics.html" . }}
+    {{ template "_internal/google_analytics_async.html" . }}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="{{ "css/blog.css" | absURL }}" />
+    {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+</head>
+
+<body>
+
+    <!-- nav -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{ .Site.BaseURL | absURL }}">Home</a>
+        </div>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{ .RSSLink }}">RSS</a>
+        </div>
+    </nav>
+    <!-- /nav -->
+
+    <!-- hero -->
+    <section class="hero is-info is-medium">
+        <div class="hero-body" style="background-image: url({{ "img/bg-blog.jpg" | absURL }});">
+            <div class="container has-text-centered">
+                <br>
+                <h1 class="title is-size-1">
+                    {{ if eq .Type "tags" }}
+                    #{{ .Title }}
+                    {{ else if eq .Type "archives" }}
+                    Archive {{ .Title }}
+                    {{ else }}
+                    {{ .Title }}
+                    {{ end }}
+                </h1>
+                {{ if eq .Type "article" }}
+                {{ .Date.Format "January 2, 2006" }} &middot;&nbsp;{{ .ReadingTime }} min read
+                {{ end }}
+            </div>
+        </div>
+    </section>

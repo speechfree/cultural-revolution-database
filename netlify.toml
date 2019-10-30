@@ -1,0 +1,19 @@
+
+[build.environment]
+  YARN_VERSION = "1.12.1"
+  NPM_VERSION = "6.4.1"
+  HUGO_VERSION = "0.55.6"
+
+[build]
+  command = "yarn build"
+  publish = "dist"
+
+[context.deploy-preview]
+  command = "yarn build:preview"
+
+# [build]
+#   publish = "output"
+#   command = 'cd src && hugo  --theme="jeffprod" --destination="../output"'
+
+# [build.environment]
+#   HUGO_VERSION = "0.53"

@@ -1,0 +1,38 @@
+baseURL = "/"
+relativeURLs = true
+languageCode = "en-us"
+title = "Fight For Freedom of Speech"
+auth = "Fight For Freedom of Speech"
+theme = "jeffprod"
+copyright = "Copyright © Fight For Freedom of Speech"
+enableRobotsTXT = true
+disableAliases = true
+googleAnalytics = "UA-151212685-1"
+
+[outputs]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+
+[permalinks]
+    post = "/post/:filename"
+
+[taxonomies]
+    tag = "tags"
+    archive = "archives"
+
+[mediaTypes."text/netlify"]
+suffixes = [""]
+delimiter = ""
+
+# add output format for netlify _redirects
+[outputFormats.REDIRECTS]
+mediatype = "text/netlify"
+baseName = "_redirects"
+isPlainText = true
+notAlternative = true
+
+# add output format for netlify _headers
+[outputFormats.HEADERS]
+mediatype = "text/netlify"
+baseName = "_headers"
+isPlainText = true
+notAlternative = true

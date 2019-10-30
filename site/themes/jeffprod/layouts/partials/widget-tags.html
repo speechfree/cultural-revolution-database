@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-content">
+        <h1 class="title is-5">Tags</h1>
+        <div class="tags">
+        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+            <span class="tag"><a href="{{ "tags" | absURL }}/{{ $name | urlize }}">{{ $name }}</a></span>
+        {{ end }}
+        </div>          
+    </div>
+</div>

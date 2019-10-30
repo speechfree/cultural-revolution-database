@@ -1,0 +1,34 @@
+version: '2'
+services:
+
+  hugo:
+    container_name: hugo
+    image: jojomi/hugo:latest
+    volumes:
+      - ./src/:/src
+      - ./output/:/output
+      - ./run.sh:/src/run.sh
+    environment:
+      - HUGO_REFRESH_TIME=3600
+      # - HUGO_WATCH=True
+      # - HUGO_BASEURL=localhost
+      - HUGO_THEME=jeffprod
+      - HUGO_REFRESH_TIME=1
+      - HUGO_DESTINATION=/output
+    restart: always
+    command: ["tail", "-f", "/dev/null"]
+    # command: ["./run.sh"]
+    ports:
+      - 1313:1313
+
+  web:
+      container_name: hugo_web
+      image: nginx:stable
+      volumes:
+          - ./output:/usr/share/nginx/html:ro
+          - ./nginx/conf.d:/etc/nginx/conf.d
+      ports: 
+          - "80:80"
+      restart: always
+  # hugo server --watch=true --source="/src" --theme="jeffprod" --destination="/output" --bind="0.0.0.0" live serve
+  # hugo --source="/src" --theme="jeffprod" --destination="/output" #build file

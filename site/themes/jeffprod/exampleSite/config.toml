@@ -1,0 +1,12 @@
+baseurl = "https://example.com"
+title = "Hugo Theme"
+author = "@JeffProd"
+copyright = "Copyright © 2008–2018, @JeffProd"
+canonifyurls = true
+paginate = 3
+
+theme = "hugo-blog-jeffprod"
+
+[taxonomies]
+    tag = "tags"
+    archive = "archives"

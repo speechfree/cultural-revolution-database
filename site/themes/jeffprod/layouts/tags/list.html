@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+{{ $tag := lower .Title }}
+
+<div class="columns">
+    <div class="column is-9">
+        <div class="tile is-child box">
+            <div class="content">
+{{ range $key, $value := .Site.Taxonomies.tags }}{{ if eq $key $tag }}{{ range $value.Pages }}
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="title is-4"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
+                            <p class="subtitle is-size-6 has-text-grey-light">
+                                Published at {{ .Date.Format "January 2, 2006" }} &middot;
+                                <i class="far fa-clock"></i>&nbsp;{{.ReadingTime}} min read
+                            </p>
+                            <p>{{ .Summary }}...</p>
+                        </div>
+                    </div>
+                </article>
+                <br>
+{{ end }}{{ end }}{{ end }}
+            </div>
+        </div>
+    </div>
+    <div class="column is-3">
+        {{ partial "widget-tags.html" . }}<br>
+        {{ partial "widget-recent.html" . }}<br>
+        {{ partial "widget-archives.html" . }}
+    </div>
+</div>
+
+{{ end }}

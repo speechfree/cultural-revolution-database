@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: speechfree/fightforfreedom
+  branch: master
+site_url: https://freespeech.netlify.com
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+collections: # A list of collections the CMS should be able to edit
+  - name: 'posts' # Used in routes, ie.: /admin/collections/:slug/edit
+    label: 'Posts' # Used in the UI
+    label_singular: 'Post' # Used in the UI, ie: "New Post"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    folder: 'site/content/post'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DDTHH:MM:ss.SSSSSSSZ',
+          timeFormat: 'HH:mm',
+          format: 'YYYY-MM-DDTHH:MM:ss.SSSSSSSZ',
+        }
+      - label: 'Cover Image'
+        name: 'image'
+        widget: 'image'
+        required: false
+        tagname: ''
+      - {label: Tags, name: tags, widget: list, default: ['言论自由', '因言获罪']}
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+    meta:
+      - { label: 'SEO Description', name: 'description', widget: 'text' }

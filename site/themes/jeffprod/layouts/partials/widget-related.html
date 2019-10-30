@@ -1,0 +1,17 @@
+        {{ range first 1 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+  {{ $.Scratch.Set "has_related" true }}
+{{ end }}
+
+{{ if $.Scratch.Get "has_related" }}
+<div class="card">
+    <div class="card-content">
+        <h1 class="title is-5">Related posts</h1>
+      {{ $num_to_show := .Site.Params.related_content_limit | default 7 }}
+      {{ range first $num_to_show (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+            <h1><a href="{{ .Permalink | absURL }}">{{ .Title }}</a></h1>
+            <time class="has-text-grey-light is-size-7">{{ .Date.Day }} {{ .Date.Month }} {{ .Date.Year }}</time>
+      {{ end }}
+    </div>
+</div>
+{{ end }}
+    
