@@ -9,6 +9,9 @@ enableRobotsTXT = true
 disableAliases = true
 googleAnalytics = "UA-151212685-1"
 summaryLength = 50
+media_folder = "/site/static/images/uploads"
+public_folder = "/static/images/uploads"
+
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
 
