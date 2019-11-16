@@ -3,6 +3,7 @@ relativeURLs = true
 languageCode = "zh-cn"
 title = "Fight For Freedom of Speech"
 auth = "Fight For Freedom of Speech"
+description = "盘点中国近年文字狱事件，为中国网警执法案例做义务宣传！#言论自由 Collection of incidents that Chinese authorities violate rights of speech freedom. #speechfreedom"
 theme = "jeffprod"
 copyright = "Copyright © Fight For Freedom of Speech"
 enableRobotsTXT = true
