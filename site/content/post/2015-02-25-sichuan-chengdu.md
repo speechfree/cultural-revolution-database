@@ -13,4 +13,4 @@ tags:
 * **处罚**：有期徒刑2.5年
 * **原文**：[著名右派作家铁流“非法经营罪”案一审判决书](https://www.chinesepen.org/blog/archives/23094)
 
-[著名右派作家铁流“非法经营罪”案一审判决书](/static/images/uploads/201503131154china1.jpg)
+![著名右派作家铁流“非法经营罪”案一审判决书](/static/images/uploads/201503131154china1.jpg)
