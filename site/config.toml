@@ -1,6 +1,6 @@
 baseURL = "/"
 relativeURLs = true
-languageCode = "en-us"
+languageCode = "zh-cn"
 title = "Fight For Freedom of Speech"
 auth = "Fight For Freedom of Speech"
 theme = "jeffprod"
@@ -8,7 +8,7 @@ copyright = "Copyright © Fight For Freedom of Speech"
 enableRobotsTXT = true
 disableAliases = true
 googleAnalytics = "UA-151212685-1"
-
+summaryLength = 50
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
 
