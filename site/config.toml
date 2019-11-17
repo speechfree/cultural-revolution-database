@@ -1,4 +1,5 @@
 baseURL = "/"
+site_url = "https://freespeech.netlify.com"
 relativeURLs = true
 languageCode = "zh-cn"
 title = "Fight For Freedom of Speech"
