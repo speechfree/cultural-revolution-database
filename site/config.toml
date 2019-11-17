@@ -14,6 +14,9 @@ summaryLength = 50
 media_folder = "/site/static/images/uploads"
 public_folder = "/static/images/uploads"
 
+[params]
+  DEPLOY_PRIME_URL = "https://freespeech.netlify.com"
+
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
 
