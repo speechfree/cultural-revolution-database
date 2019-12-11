@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="nav nav-tab flex-column" role="tablist" aria-orientation="vertical">
+                    {{ range $index, $elemen:= .Site.Data.tools.tools }}
+                    <a class="nav-link {{ if eq $index 0}} active {{ end }}" data-toggle="pill"
+                        href="#{{.title | urlize}}" role="tab">{{ .title }}</a>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="tab-content">
+                    {{ range $index, $elemen:= .Site.Data.tools.tools }}
+                    <div class="tab-pane fade {{ if eq $index 0}} show active {{ end }}" id="{{.title | urlize}}"
+                        role="tabpanel">
+                        <div class="row">
+                            {{ range .tool}}
+                            <div class="col-md-6 mb-4">
+                                <div class="card border-0 shadow">
+                                    <img src="{{ .image | relURL }}" alt="{{ .name | markdownify }}"
+                                        class="card-img-top">
+                                    <div class="card-body">
+                                        <h4 class="h5 mb-4"><a class="text-dark"
+                                                href="{{ .link | safeURL }}">{{ .name | markdownify }}</a></h4>
+                                        <a href="{{ .link | safeURL }}" class="btn btn-primary">Visit Site</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

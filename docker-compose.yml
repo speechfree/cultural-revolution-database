@@ -1,0 +1,16 @@
+version: '2'
+services:
+
+  hugo:
+    container_name: hugo
+    image: jojomi/hugo:latest
+    volumes:
+      - ./:/src
+      - ./public:/public
+    restart: always
+    working_dir: /src/site
+    # command: ["tail", "-f", "/dev/null"]
+    # command: hugo server --bind="0.0.0.0"
+    command: hugo server --watch=true  --disableFastRender --destination="/public" --bind="0.0.0.0"
+    ports:
+      - 1313:1313

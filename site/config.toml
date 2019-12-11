@@ -44,3 +44,29 @@ mediatype = "text/netlify"
 baseName = "_headers"
 isPlainText = true
 notAlternative = true
+
+[[menu.main]]
+URL = "list"
+name = "list"
+weight = 2
+
+
+########################## Plugings ######################################
+
+# css plugins
+[[params.plugins.css]]
+URL = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+URL = "plugins/themify-icons/themify-icons.css"
+
+# js plugins
+[[params.plugins.js]]
+URL = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+URL = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+URL = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+URL = "plugins/search/mark.js"
+[[params.plugins.js]]
+URL = "plugins/search/search.js"

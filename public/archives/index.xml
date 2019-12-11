@@ -1,0 +1,14 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archives on Fight For Freedom of Speech</title>
+    <link>https://freespeech.netlify.com//localhost:1313/archives/</link>
+    <description>Recent content in Archives on Fight For Freedom of Speech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © Fight For Freedom of Speech</copyright>
+    
+        <atom:link href="//localhost:1313/archives/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
