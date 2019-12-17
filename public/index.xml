@@ -1,12 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fight For Freedom of Speech</title>
+    <title>中国文化大革命文库 The Chinese Cultural Revolution Database</title>
     <link>https://freespeech.netlify.com//localhost:1313/</link>
-    <description>Recent content on Fight For Freedom of Speech</description>
+    <description>Recent content on 中国文化大革命文库 The Chinese Cultural Revolution Database</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>Copyright © Fight For Freedom of Speech</copyright>
-    <lastBuildDate>Wed, 30 Oct 2019 14:10:24 +0800</lastBuildDate>
+    <copyright>Copyright © 中国文化大革命文库</copyright>
     
         <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,18 +13,9 @@
     <item>
       <title>Posts</title>
       <link>https://freespeech.netlify.com//localhost:1313/post/</link>
-      <pubDate>Wed, 30 Oct 2019 14:10:24 +0800</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//localhost:1313/post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>https://freespeech.netlify.com//localhost:1313/list/</link>
-      <pubDate>Sat, 06 Jul 2019 15:27:17 +0600</pubDate>
-      
-      <guid>//localhost:1313/list/</guid>
       <description></description>
     </item>
     
