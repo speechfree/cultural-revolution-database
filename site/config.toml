@@ -1,5 +1,5 @@
-baseURL = "/"
-site_url = "https://freespeech.netlify.com"
+baseURL = "https://speechfree.github.io/cultural-revolution-database/"
+site_url = "https://speechfree.github.io/cultural-revolution-database/"
 relativeURLs = true
 languageCode = "zh-cn"
 title = "中国文化大革命文库 The Chinese Cultural Revolution Database"
@@ -15,7 +15,7 @@ media_folder = "/site/static/images/uploads"
 public_folder = "/static/images/uploads"
 
 [params]
-  DEPLOY_PRIME_URL = "https://freespeech.netlify.com"
+  DEPLOY_PRIME_URL = "https://speechfree.github.io/cultural-revolution-database/"
 
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]

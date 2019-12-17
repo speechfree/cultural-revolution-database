@@ -2,10 +2,10 @@
 {{ $paginator := .Paginate (where .Site.RegularPages "Section" "post").ByWeight }}
 
 <div class="columns">
-    <div class="column is-9">
+    <div class="column is-12">
         <div class="tile is-child box">
             <div class="content">
-                <h3>Fight For Freedom of Speech !</h3>
+                <h3>中国文化大革命文库 The Chinese Cultural Revolution Database</h3>
                 <hr>
                 {{ range $paginator.Pages }}
                 <article class="media">

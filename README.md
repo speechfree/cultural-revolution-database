@@ -1,13 +1,9 @@
-内容根据 [中国文字狱事件盘点](https://twitter.com/SpeechFreedomCN) 发布的推特整理而成。 
+内容根据 [中国文化大革命文库](http://ccradb.appspot.com/) 整理而成，格式为 markdown 方便浏览下载及做其他使用
 
-盘点中国近年文字狱事件，为中国网警执法案例做义务宣传！#言论自由 Collection of incidents that Chinese authorities violate rights of speech freedom. #speechfreedom
+## 《中国文化大革命文库》
 
-## 投稿
-
-投稿请发邮件至 fightforspeechfreedom#gmail.com，若为公开报道请附上相关链接，若否请附上相关证据照片。
+《中国文化大革命文库》光碟，2001年美国《中国文化大革命文库》光碟编委会、香港中文大学中国研究服务中心合作编辑，宋永毅主编。“近年来有关研究‘文化大革命’最权威、最大规模的资料库。”[1] “目前学界对‘文革’相关的原始历史资料进行收集、整理和汇编最系统、全面的资料集。”[2]2006年出第二版，2010年出第三版，字数达到五千万字。
 
 ## 网站
 
- [freespeech](http://freespeech.netlify.com)
-
- [Github Pages](https://speechfree.github.io/fightforfreedom/)
+ [Github Pages](https://speechfree.github.io/cultural-revolution-database/)
